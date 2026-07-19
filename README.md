@@ -55,31 +55,38 @@ xpens-dapp/
 
 ## 💻 Live Demo
 
-`PASTE_YOUR_NETLIFY_OR_VERCEL_URL_HERE`
+[xpense-web3.netlify.app](https://xpense-web3.netlify.app/)
 
 ---
 
 ## 🎥 Demo Video
 
-`PASTE_YOUR_1-2_MIN_DEMO_VIDEO_LINK_HERE`
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/4b3c4a18-e2b4-4e03-be06-14ddcbcb2b18" width="600" controls></video>
+</div>
 
 ---
 
 ## 📸 Screenshots
 
-**Wallet connect options (Freighter / Rabet / xBull):**
-`PASTE_SCREENSHOT_LINK_OR_EMBED_HERE`
+**1. Wallet connect options (Freighter / Rabet / xBull):**
 
-**Mobile responsive UI:**
-`PASTE_SCREENSHOT_LINK_OR_EMBED_HERE`
+<img width="250" height="300" alt="WalletConnectPage" src="https://github.com/user-attachments/assets/35719cea-49c8-45e0-9ffa-2f4ded816997" />
 
-**CI/CD pipeline running:**
-`PASTE_SCREENSHOT_LINK_OR_EMBED_HERE`
 
-**Test output (3+ passing tests):**
-`PASTE_SCREENSHOT_LINK_OR_EMBED_HERE`
+ **2. Mobile responsive UI:**
 
-*(See "How to get your screenshots" section at the bottom of this README for exactly where to find each of these.)*
+<img width="250" height="300" alt="Mobile-Responsive" src="https://github.com/user-attachments/assets/499737bc-0bd4-4f04-a85c-80e55d8d48bc" />
+
+
+**3. CI/CD pipeline running:**
+
+<img width="250" height="300" alt="CI-CD SS" src="https://github.com/user-attachments/assets/9e1a0c4e-7a18-43e2-9b47-938ca630269d" />
+
+
+**4. Test output (3+ passing tests):**
+
+<img width="250" height="300" alt="Test-Output" src="https://github.com/user-attachments/assets/1436f7d3-472b-4af6-8311-e6400ef18ae6" />
 
 ---
 
@@ -116,20 +123,26 @@ Example of a successful `add_expense` invocation on the deployed contract:
 | Explorer Link | `https://stellar.expert/explorer/testnet/tx/dd1f22a1176cc378020a526eb5fc34db01f334e3e0175471930cc83e8bb949ce` |
 | Event Emitted | `exp_add` — owner address, expense id `1`, amount `25000` (₹250.00), category `Food` |
 
-*(Get further examples by running the `stellar contract invoke` command in the Deploy section below, or by checking your deploy account's recent activity on Stellar Expert.)*
-
 ---
 
 ## 📃 Features
 
 - Wallet login for **Freighter**, **Rabet**, and **xBull** — each opens the wallet's own native permission popup on connect, via [`@creit.tech/stellar-wallets-kit`](https://stellarwalletskit.dev/)
+
 - Add, delete, and clear expenses — every write is signed by the connected wallet and requires `owner.require_auth()` on-chain, so only that wallet can modify its own data
+
 - Per-wallet on-chain storage — expenses are keyed by `Address` in Soroban persistent storage; one wallet can never read or write another wallet's entries
+
 - Live category breakdown chart, running totals, transaction count, and average spend — all computed from real contract state (`get_summary` is a contract-level read, not a frontend calculation)
+
 - Real-time-style updates — the dashboard polls the contract and refreshes immediately after every transaction, so changes reflect without a manual reload
+
 - On-chain events (`exp_add`, `exp_del`, `exp_clr`) published on every write, laying the groundwork for a future event-streaming/indexer layer
+
 - Mobile-responsive layout throughout (landing, wallet connect, dashboard)
+
 - Loading and error states on every contract call — network hiccups and rejected signatures surface as inline messages instead of silent failures
+
 - Client-side + on-chain validation (rejects empty descriptions and non-positive amounts, both in the form and in the contract itself)
 
 ---
@@ -238,15 +251,6 @@ cd frontend && npm test
 
 ---
 
-## 🌐 Links
-
-1. Live Demo: `PASTE_YOUR_NETLIFY_OR_VERCEL_URL_HERE`
-2. Contract: `https://stellar.expert/explorer/testnet/contract/CC6JLUEVOL7DXE5BBQACEGEPSSUQMZLHXAPO6SCPGDIDJS2E24VXFVEV`
-3. Explorer (sample tx): `https://stellar.expert/explorer/testnet/tx/dd1f22a1176cc378020a526eb5fc34db01f334e3e0175471930cc83e8bb949ce`
-4. App Installation: [Freighter](https://freighter.app), [Rabet](https://rabet.io), [xBull](https://xbull.app)
-5. Testnet Account Funding: `https://friendbot.stellar.org?addr=YOUR_PUBLIC_KEY`
-
----
 
 ### Suggested commit plan (10+ commits)
 
@@ -267,9 +271,19 @@ cd frontend && npm test
 
 ---
 
+## 🌐 Links
+
+1. Live Demo: " https://xpense-web3.netlify.app/ "
+2. Contract: `https://stellar.expert/explorer/testnet/contract/CC6JLUEVOL7DXE5BBQACEGEPSSUQMZLHXAPO6SCPGDIDJS2E24VXFVEV`
+3. Explorer (sample tx): `https://stellar.expert/explorer/testnet/tx/dd1f22a1176cc378020a526eb5fc34db01f334e3e0175471930cc83e8bb949ce`
+4. App Installation: [Freighter](https://freighter.app), [Rabet](https://rabet.io), [xBull](https://xbull.app)
+5. Testnet Account Funding: `https://friendbot.stellar.org?addr=YOUR_PUBLIC_KEY`
+
+---
+
 ## 🔮 Future Work
 
 - Replace polling with true event streaming (Soroban RPC event subscription or an indexer) for instant cross-tab updates
 - A second contract composing `get_summary` cross-contract (e.g. monthly budget alerts)
 - Multi-currency support beyond INR
-- Users can get their deleted expenses back again if they want in future(Only once).
+- Users can restore their deleted expenses back again if they want in future (Deletion and Restoration allowed only once).
