@@ -71,22 +71,22 @@ xpens-dapp/
 
 **1. Wallet connect options (Freighter / Rabet / xBull):**
 
-<img width="250" height="300" alt="WalletConnectPage" src="https://github.com/user-attachments/assets/35719cea-49c8-45e0-9ffa-2f4ded816997" />
+<img width="300" height="380" alt="WalletConnectPage" src="https://github.com/user-attachments/assets/35719cea-49c8-45e0-9ffa-2f4ded816997" />
 
 
  **2. Mobile responsive UI:**
 
-<img width="250" height="300" alt="Mobile-Responsive" src="https://github.com/user-attachments/assets/499737bc-0bd4-4f04-a85c-80e55d8d48bc" />
+<img width="400" height="550" alt="Mobile-Responsive" src="https://github.com/user-attachments/assets/499737bc-0bd4-4f04-a85c-80e55d8d48bc" />
 
 
 **3. CI/CD pipeline running:**
 
-<img width="250" height="300" alt="CI-CD SS" src="https://github.com/user-attachments/assets/9e1a0c4e-7a18-43e2-9b47-938ca630269d" />
+<img width="300" height="380" alt="CI-CD SS" src="https://github.com/user-attachments/assets/9e1a0c4e-7a18-43e2-9b47-938ca630269d" />
 
 
 **4. Test output (3+ passing tests):**
 
-<img width="250" height="300" alt="Test-Output" src="https://github.com/user-attachments/assets/1436f7d3-472b-4af6-8311-e6400ef18ae6" />
+<img width="300" height="390" alt="Test-Output" src="https://github.com/user-attachments/assets/1436f7d3-472b-4af6-8311-e6400ef18ae6" />
 
 ---
 
